@@ -20,7 +20,7 @@ function App() {
   // Variables
   const name = "Neo Cheung";
   const placeholder = "please input";
-  const age = 42;
+  const age = 40;
   const mianiClass = "app";
   const age1 = 42;
   const numberOfMuscle = 4;
@@ -79,8 +79,8 @@ function App() {
       {/* Profile Component Section */}
       <div>
         <p></p>
-        <Profile name="Neo Cheung" gender="M" aaa="ABC">
-          aaa = 'leo'
+        <Profile name="Neo Cheung" gender="M" aaa="ABC" age={42}>
+          
         </Profile>
       </div>
     </section>
