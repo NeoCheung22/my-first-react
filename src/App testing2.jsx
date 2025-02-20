@@ -1,11 +1,9 @@
 import { useState } from "react";
 
-// 計算數字平方的組件
 function Square({num}) {
   return (<div> {num **2} </div>);
 }
 
-// 找出數組中最大數的組件
 function Largest({arr}) {
   let max = arr[0];
 
@@ -14,12 +12,12 @@ function Largest({arr}) {
       max = arr[i];
     }
   }
-  return (
+    return (
     <div> The Largest Number : {max} </div>
+    
   );
 }
 
-// 顯示機器人1控制者的組件
 function Robot({driver}) {
   return (
     <div>
@@ -28,7 +26,6 @@ function Robot({driver}) {
   );
 }
 
-// 顯示機器人2控制者的組件
 function Robot2({name}) {
   return (
     <div>
@@ -37,7 +34,6 @@ function Robot2({name}) {
   );
 }
 
-// 顯示用戶資料的組件,包含判斷是否富有
 function Profile({name, money, childen}) {
   let output = "normal";
   if(money > 100) {
@@ -52,17 +48,14 @@ function Profile({name, money, childen}) {
   );
 }
 
-// 打印兩數之和的函數
 function Printsum(b, c) {
   console.log(b + c);
 }
 
-// 根據溫度顯示水的狀態的組件
 function Water(){
   const [ temperature, setTemperature] = 
-    useState(-10);
+    useState(99);
   
-  // 使用三元運算符判斷水的狀態
   const displayText = 
     temperature <= 0 ? "ice" : temperature >= 100 ? "steam" : "water";
 
@@ -70,37 +63,31 @@ function Water(){
     <div> {displayText} </div>
   );
 }
-
-// 主應用組件
+//////////////////////////////////////////////////////
 function App() {
   const person = {name: "Neo"};
   
   return (
     <div>
-      {/* 顯示數字的平方 */}
       <Square num={2} />
       <Square num={4} />
       <Square num={6} />
       <p></p>
 
-      {/* 顯示數組最大值 */}
       <Largest arr={[4, 0, 22, 6, 17]} />
       <p></p>
 
-      {/* 顯示機器人控制者 */}
       <Robot driver={person} />
       <p></p>
 
       <Robot2 name="Leo" />
       <p></p>
 
-      {/* 顯示用戶資料 */}
       <Profile name='Leo' money={90} childen='ABC'>
         <h1>childen content</h1>
       </Profile>
       <p></p>
 
-      {/* 點擊按鈕執行判斷邏輯 */}
       <button onClick={() => {
         let a = 10;
         if (a < 10){
@@ -114,14 +101,12 @@ function App() {
         Log1
       </button><p></p>
 
-      {/* 點擊按鈕計算總和 */}
       <button onClick={() => {
         Printsum(4, 5);
       }}>
       Log2
       </button><p></p> 
 
-      {/* 顯示水的狀態 */}
       <Water /><p></p>    
     </div>
   );
