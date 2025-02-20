@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Recat</title>
+    <title>First React</title>
 </head>
 <body>
-
+    <!-- React 應用的根元素 -->
     <div id="app"></div>
 
+<!-- 引入 React 核心庫 -->
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<!-- 引入 ReactDOM 用於渲染 -->
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- 引入 Babel 用於轉換 JSX -->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+<!-- 使用 Babel 轉換的 React 代碼 -->
 <script type="text/babel">
 
-// Functional Component
+// 函數組件 App
 const App = () => {
+    // 定義變量
+    const a = "React 入門課程";
+
+    // 按鈕點擊事件處理函數
+    const handleClick = (event) => {
+        console.log("點擊了");
+        console.log(event);
+    }
+
     return (
         <div>
             <h1>Hello World</h1>
-            <p>This is my first React App</p>
+            <p className="text">This is my first React App</p>
+            {/* 使用 slice 方法截取字符串 */}
+            <p>{a.slice(5)}</p>
+
+            {/* 內聯的事件處理函數 */}
+            <button onClick= {() => console.log("checked")}>按鈕1</button>
+            <p></p>
+
+            {/* 使用預定義的事件處理函數 */}
+            <button onClick= {handleClick}>按鈕2</button>
         </div>
     )
 }
 
-ReactDOM.render(
-    <App />, 
-    document.getElementById('app')
-    )
+// 使用 React 18 的新渲染方法
+const root = ReactDOM.createRoot(document.getElementById('app'));
+root.render(<App />);
+
 </script>
 
 </body>

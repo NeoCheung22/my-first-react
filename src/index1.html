@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Recat</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+// Functional Component
+const App = () => {
+
+    const a = "React 入門課程";
+
+    const handleClick = (event) => {
+    console.log("點擊了");
+    console.log(event);
+    }
+
+    return (
+        <div>
+            <h1>Hello World</h1>
+            <p calssName = "text">This is my first React App</p>
+            <p>{a.slice(5)}</p>
+
+        {/* 點擊按鈕checked */}
+        <button onClick= {() => console.log("checked")}>按鈕1</button>
+        <p></p>
+
+        {/* 點擊按鈕checked */}
+        <button onClick= {handleClick}>按鈕2</button>
+
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <App />, 
+    document.getElementById('app')
+    )
+</script>
+
+</body>
+</html>
