@@ -74,6 +74,11 @@ function Water(){
 // 主應用組件
 function App() {
   const person = {name: "Neo"};
+
+  const handleClick = (event) => {
+    console.log("點擊了");
+    console.log(event);
+  }
   
   return (
     <div>
@@ -122,7 +127,15 @@ function App() {
       </button><p></p> 
 
       {/* 顯示水的狀態 */}
-      <Water /><p></p>    
+      <Water /><p></p> 
+
+      {/* 點擊按鈕checked */}
+      <button onClick= {() => console.log("checked")}>按鈕1</button>
+      <p></p>
+
+      {/* 點擊按鈕checked */}
+      <button onClick= {handleClick}>按鈕2</button>
+
     </div>
   );
     
