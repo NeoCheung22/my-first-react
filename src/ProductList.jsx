@@ -13,14 +13,15 @@ export default function ProductList() {
 
   return (
     <div>
-       <h1>請選擇辰購買的水果</h1>
+       <button onClick={() => window.location.href = 'https://10.50.2.80'}>CCTV</button>
+       <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇辰購買的水果</h1>
        <div>
         {
           productList.map((product) => {
             return (
               <div key={product.id}>
                 <h2>{product.name}</h2>
-                <img src={'pulbic/img/${product.image}'} alt={product.name} />
+                <img src={`public/img/${product.image}`} alt={product.name} />                
                 <p>{product.description}</p>
                 <p>價格：{product.price} 元</p>
               </div>
