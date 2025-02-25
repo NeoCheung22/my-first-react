@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './ProductList.module.css'
 
 export default function ProductList() {
 
@@ -14,16 +15,18 @@ export default function ProductList() {
   return (
     <div>
        <button onClick={() => window.location.href = 'https://10.50.2.80'}>CCTV</button>
+       <h2>2025 / 02 /25</h2>
+       <h1 className={style.productBorder}>今日的的新鮮水果</h1>
        <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇辰購買的水果</h1>
        <div>
         {
           productList.map((product) => {
             return (
-              <div key={product.id}>
-                <h2>{product.name}</h2>
-                <img src={`public/img/${product.image}`} alt={product.name} />                
-                <p>{product.description}</p>
-                <p>價格：{product.price} 元</p>
+              <div className='productBorder' key={product.id}>
+              <h2>{product.name}</h2>
+              <img src={`public/img/${product.image}`} alt={product.name} style={{ width: '200px', height: '200px' }} />
+              <p>{product.description}</p>
+              <p>價格：{product.price} 元</p>
               </div>
             )
           })
