@@ -1,0 +1,30 @@
+//第一個branch 'wailok' (已刪除)
+PS D:\my-first-react> git checkout -b wailok
+
+Switched to a new branch 'wailok'
+
+PS D:\my-first-react> git push --set-upstream origin wailok
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'wailok' on GitHub by visiting:
+remote:      https://github.com/NeoCheung22/my-first-react/pull/new/wailok
+remote:
+To https://github.com/NeoCheung22/my-first-react.git
+ * [new branch]      wailok -> wailok
+branch 'wailok' set up to track 'origin/wailok'.
+
+//第二個branch 'wailok.chueng_Desktop'
+PS D:\my-first-react> git checkout -b wailok.chueng_Desktop
+
+Switched to a new branch 'wailok.chueng_Desktop'
+
+PS D:\my-first-react> git push origin HEAD
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'wailok.chueng_Desktop' on GitHub by visiting:
+remote:      https://github.com/NeoCheung22/my-first-react/pull/new/wailok.chueng_Desktop
+remote:
+To https://github.com/NeoCheung22/my-first-react.git
+ * [new branch]      HEAD -> wailok.chueng_Desktop
