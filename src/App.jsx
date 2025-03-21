@@ -33,16 +33,27 @@ function App() {
     
     return (
         <div>
+
+             {/*ProductList function*/}
             <ProductList/>
+            
+             {/*增加按鈕*/}
             <button onClick={decrementCount}> - </button>
+            
+             {/*數量顯示*/}
             <span> {count} </span>
+            
+             {/*減少按鈕*/}
             <button onClick={incrementCount}> + </button>
             <p></p>
             
+             {/*Name and age display*/}
             <div>
                 <div>{name} is {age} years old</div>
                 <button onClick={handleClick}>Click me</button>
             </div>
+             {/*Name and age display*/}
+             
         </div>
     );
 }
