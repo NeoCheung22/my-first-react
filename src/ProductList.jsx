@@ -30,7 +30,7 @@ export default function ProductList() {
 
   return (
     <div>
-       <button onClick={() => window.open('https://10.50.2.80', '_blank')}>CCTV</button>
+       <iframe src="https://admin:admin13579@10.50.2.80" width="100%" height="600px" title="CCTV"></iframe>
        <h2>2025 / 02 /25</h2>
        <h1 className={style.productBorder}>今日的的新鮮水果</h1>
        
