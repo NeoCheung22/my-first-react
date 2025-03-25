@@ -33,7 +33,7 @@ function App() {
     
     return (
         <div>
-            <ProductList/>
+            <ProductList/>            
             <button onClick={decrementCount}> - </button>
             <span> {count} </span>
             <button onClick={incrementCount}> + </button>

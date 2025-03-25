@@ -30,10 +30,22 @@ export default function ProductList() {
 
   return (
     <div>
-       <iframe src="https://admin:admin13579@10.50.2.80" width="100%" height="600px" title="CCTV"></iframe>
-       <h2>2025 / 02 /25</h2>
+      
+       <h2>2025 / 02 /25</h2>       
        <h1 className={style.productBorder}>今日的的新鮮水果</h1>
+
+      {/*CCTV*/}
+      <button onClick={() => {
+        const win = window.open('https://10.50.2.80', '_blank');
+        win.onload = () => {
+          win.document.getElementById('username').value = 'admin';
+          win.document.getElementById('password').value = 'admin13579';
+          win.document.getElementById('loginButton').click();
+        };
+      }}>CCTV</button>
        
+      <button onClick={() => window.open('https://10.50.2.80', '_blank')}>CCTV</button>
+
        {product1} <button onClick ={handleClick1}>改變變數值1</button>
        {product2} <button onClick ={handleClick2}>改變變數值2</button>
        <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇辰購買的水果</h1>
