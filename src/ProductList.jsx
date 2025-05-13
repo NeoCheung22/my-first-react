@@ -48,7 +48,7 @@ export default function ProductList() {
 
        {product1} <button onClick ={handleClick1}>改變變數值1</button>
        {product2} <button onClick ={handleClick2}>改變變數值2</button>
-       <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇辰購買的水果</h1>
+       <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇購買的水果</h1>
        <div>
         {
           productList.map((product) => {
