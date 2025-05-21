@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import {} from react-router-dom
+import { BrowserRouter, Route, Routes, Link} from 'react-router-dom';
+import Checkout from "./Checkout"; 
+import ProductDetail from "./ProductDetail";
 import ProductList from "./ProductList";
 
 
@@ -33,29 +35,37 @@ function App() {
     }//加減按鈕
     
     return (
-        <div>
+        <BrowserRouter>
+            <a href='/'>首頁</a>
+            <a href='/checkout'>購物車</a><p></p>
 
-             {/*ProductList function*/}
-            <ProductList/>
-            
-             {/*增加按鈕*/}
+            <Link to="/">首頁</Link>
+            <Link to="/product_detail">產品資料</Link>
+            <Link to="/checkout">購物車</Link>
+
+            <Routes>
+                
+                {/* ProductList function */}
+                <Route path="/" element={<ProductList />} />
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/product_detail" element={<ProductDetail />} />
+                <Route path="*" element={<h1>找不到頁面 404 Not Found</h1>} />
+
+
+            </Routes>
+            {/* 增加按鈕 */}
             <button onClick={decrementCount}> - </button>
-            
-             {/*數量顯示*/}
+            {/* 數量顯示 */}
             <span> {count} </span>
-            
-             {/*減少按鈕*/}
+            {/* 減少按鈕 */}
             <button onClick={incrementCount}> + </button>
             <p></p>
-            
-             {/*Name and age display*/}
+            {/* Name and age display */}
             <div>
                 <div>{name} is {age} years old</div>
                 <button onClick={handleClick}>Click me</button>
             </div>
-             {/*Name and age display*/}
-             
-        </div>
+        </BrowserRouter>
     );
 }
 
