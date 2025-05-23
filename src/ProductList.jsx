@@ -7,24 +7,6 @@ export default function ProductList() {
   // Conditional Rendering隱藏/顯示開關
   const[showProduct, setShowProduct] = useState(false)
 
-  //"水果1 State"
-  const[product1, setProduct1] = useState('水果1')
-
-  // "水果1 State" 按鈕
-  const handleClick1 = () => {
-    setProduct1('蔬菜1')
-    console.log(product1)
-  }//
-
-  //"水果2 State"
-  const[product2, setProduct2] = useState('水果2')
-
-  // "水果2 State" 按鈕
-  const handleClick2 = () => {
-    setProduct2('蔬菜2')
-    console.log(product2)
-  }//
-
   // 產品List
   let productList = [
     {"id": 1, "name": "蘋果", "price": 5, "image": "apple.jpg", "description": "新鮮的蘋果50克"},
@@ -37,21 +19,12 @@ export default function ProductList() {
 
   return (
     <div>
-        {/*CCTV系統 link*/} 
-       <button onClick={() => window.open('https://10.50.2.80', '_blank')}>CCTV</button>
 
         {/*隱藏產品*/}
       <div>
       {showProduct && <button onClick={()=> {setShowProduct(false)}}>隠藏產品</button>}
       {!showProduct && <button onClick={()=> {setShowProduct(true)}}>顯示產品</button>}
       </div>
-
-        {/*標題*/}       
-       <h1 className={style.productBorder}>今日的的新鮮水果</h1>
-       
-        {/*變數值*/}
-       {product1} <button onClick ={handleClick1}>改變變數值1</button>
-       {product2} <button onClick ={handleClick2}>改變變數值2</button>
        
         {/*副標題*/} 
        <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇購買的水果</h1>
@@ -70,9 +43,8 @@ export default function ProductList() {
             )
           })
         }
-       </div>
-        {/*水果清單*/}
-    </div>
-  )
-}
+       </div>{/*水果清單*/}
+    </div> //return
+  ) //return
+} //export default ProductList
 
