@@ -7,7 +7,6 @@ function App() {
  
     return (
         <div>
-             {/*ProductList function*/}
             <ProductList/>
         </div>
     );
