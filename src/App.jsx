@@ -7,13 +7,7 @@ import ProductList from "./ProductList";
 
 
 function App() {
-<<<<<<< HEAD
- 
-    return (
-        <div>
-            <ProductList/>
-        </div>
-=======
+
             
     return (
         <BrowserRouter>
@@ -38,7 +32,6 @@ function App() {
 
             </Routes>            
         </BrowserRouter>
->>>>>>> d5566c53e54c3262f41e90046b5df25fba10c40a
     );
 }
 
