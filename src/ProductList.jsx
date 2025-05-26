@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import style from './ProductList.module.css'
+import styles from './ProductList.module.css'
 import {useState} from 'react'
 
 export default function ProductList() {
