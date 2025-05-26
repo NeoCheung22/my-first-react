@@ -12,11 +12,11 @@ function App() {
     return (
         <BrowserRouter>
 
-            <a href='/checkout'>購物車(a tag)</a>
+            <a href='/checkout'>購物車(a tag)</a><br/>
 
-            <Link to="/">首頁</Link>
-            <Link to="/product_detail">產品資料</Link>
-            <Link to="/checkout">購物車</Link>
+            <Link to="/">首頁</Link><br/>
+            <Link to="/product">產品資料</Link><br/>
+            <Link to="/checkout">購物車</Link><br/>
 
             <Routes>
                 

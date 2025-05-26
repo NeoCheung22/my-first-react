@@ -6,7 +6,7 @@ export default function ProductDetail() {
 
   return (
     <div>
-      #{params.id} 產品資料
+      #{params.id} 產品資料<br />
 
       <Link to="/">回到產品列表</Link>
     </div>
