@@ -1,7 +1,9 @@
+import Title from "./Title";
+
 export  default function Checkout() {
   return (
     <div>
-        結帳
+        <Title mainTitle="結帳" />
     </div>
   );
 }

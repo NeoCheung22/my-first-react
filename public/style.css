@@ -1,5 +1,5 @@
-h2{
-    border: 5px solid yellow;
-    margin: 20px 0;
+P{
     font-size: 22px;
-}
+    font-weight: bold;
+    color: blueviolet;
+} 

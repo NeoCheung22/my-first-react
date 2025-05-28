@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import styles from './ProductList.module.css'
 import {useState} from 'react'
+import Title from './Title'
 
 export default function ProductList() {
  
@@ -23,23 +24,24 @@ export default function ProductList() {
       {showProduct && <button onClick={() => setShowProduct(false)}>隱藏水果清單</button>}
       {!showProduct && <button onClick={() => setShowProduct(true)}>顯示水果清單</button>}
 
-       <h1 style={{ backgroundColor: 'orange', borderBottom: '5px solid red' }}>請選擇購買的水果</h1>
-       
-        {/*水果清單*/}
-      <div>
+      <Title mainTitle="請選擇購買的水果" subTitle="今日有九折" />
+               
+      <div> {/*水果清單*/}
         {
           showProduct && productList.map((product) => {
             return (
               <div className={styles.productBorder} key={product.id}>
-              <h2>{product.name}</h2>
-              <img src={`public/img/${product.image}`} alt={product.name} style={{ width: '200px', height: '200px' }} />
-              <p>{product.description}</p>
-              <p>價格：{product.price} 元</p>
+                  <p>{product.name}</p>
+                  價格：{product.price} 元
+                  <Link to={'/product/' +product.id}>
+                      <img src={`public/img/${product.image}`} /> <br/>
+                  </Link>
+                  {product.description}
               </div>
             )
           })
         }
-       </div>{/*水果清單*/}
+       </div> {/*水果清單*/}
     </div> //return
   ) //return
 } //export default ProductList
