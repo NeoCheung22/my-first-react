@@ -30,7 +30,7 @@ export default function ProductList() {
         {
           showProduct && productList.map((product) => {
             return (
-              <div className='productBorder' key={product.id}>
+              <div className={styles.productBorder} key={product.id}>
               <h2>{product.name}</h2>
               <img src={`public/img/${product.image}`} alt={product.name} style={{ width: '200px', height: '200px' }} />
               <p>{product.description}</p>
