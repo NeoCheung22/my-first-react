@@ -14,15 +14,21 @@ export default function ProductList() {
     {"id": 5, "name": "藍梅", "price": 10, "image": "blueberry.jpg", "description": "新鮮的藍梅50克"},
     {"id": 6, "name": "白蘿蔔", "price": 5, "image": "carrot.jpg", "description": "新鮮的白蘿蔔1公斤"}
   ]
- 
+
+   // Conditional Rendering隱藏/顯示開關
+  const[showProduct, setShowProduct] = useState(false)
+
   return (
     <div>
 
-      <Title mainTitle="請選擇購買的水果" />
+      {showProduct && <button onClick={() => setShowProduct(false)}>隱藏水果清單</button>}
+      {!showProduct && <button onClick={() => setShowProduct(true)}>顯示水果清單</button>}
+
+      <Title mainTitle="請選擇購買的水果" subTitle="今日有九折" />
                
       <div> {/*水果清單*/}
         {
-          productList.map((product) => {
+          showProduct && productList.map((product) => {
             return (
               <div className={styles.productBorder} key={product.id}>
                   <p>{product.name}</p>
