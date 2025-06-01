@@ -7,15 +7,11 @@ import ProductList from "./ProductList";
 
 
 function App() {
-
             
     return (
         <BrowserRouter>
 
-            <a href='/checkout'>購物車(a tag)</a><br/>
-
             <Link to="/">首頁</Link><br/>
-            <Link to="/product">產品資料</Link><br/>
             <Link to="/checkout">購物車</Link><br/>
 
             <Routes>
