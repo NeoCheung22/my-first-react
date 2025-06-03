@@ -6,13 +6,18 @@ import Title from './Title'
 
 export default function ProductList() {
  
-  let [productList, setProductList] = useState([]) 
-
-  console.log(productList)
+  let productList = [
+    {"id": 1, "name": "蘋果", "price": 5, "image": "apple.jpg", "description": "新鮮的蘋果50克"},
+    {"id": 2, "name": "橙", "price": 3, "image": "orange.jpg", "description": "新鮮的橙50克"},
+    {"id": 3, "name": "芒果", "price": 4, "image": "mango.jpg", "description": "新鮮的芒果500克"},
+    {"id": 4, "name": "西瓜", "price": 20, "image": "watermelon.jpg", "description": "新鮮的西瓜2公斤"},
+    {"id": 5, "name": "藍梅", "price": 10, "image": "blueberry.jpg", "description": "新鮮的藍梅50克"},
+    {"id": 6, "name": "白蘿蔔", "price": 5, "image": "carrot.jpg", "description": "新鮮的白蘿蔔1公斤"}
+  ]
 
   fetch("https://neocheung22.github.io/demoapi/react-basicc-product.json")
   .then(response => response.json())
-  .then(data => setProductList(data));
+  .then(data => console.log(data));
  
   return (
     <div>
